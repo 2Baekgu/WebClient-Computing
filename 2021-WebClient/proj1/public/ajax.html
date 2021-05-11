@@ -17,6 +17,8 @@
             });
 
             $('#post').click(function () {
+                document.getElementById('nameInput').value = $('#name').val();
+                document.getElementById('priceInput').value = $('#price').val();
                 $.ajax({
                     url: '/products',
                     type: 'post',
@@ -32,8 +34,11 @@
             });
 
             $('#put').click(function () {
+                var index = document.getElementById('index').value;
+                document.getElementById('nameInput').value = $('#name').val();
+                document.getElementById('priceInput').value = $('#price').val();
                 $.ajax({
-                    url: '/products/0',
+                    url: '/products/'+index+'',
                     type: 'put',
                     dataType: 'text',
                     data: {
@@ -47,8 +52,9 @@
             });
 
             $('#delete').click(function () {
+                var index = document.getElementById('index').value;
                 $.ajax({
-                    url: '/products/0',
+                    url: '/products/'+index+'',
                     type: 'delete',
                     dataType: 'text',
                     success: function (data) {
@@ -60,14 +66,37 @@
     </script>
 </head>
 <body>
-    <button id="get">GET</button>
-    <button id="post">POST</button>
-    <button id="put">PUT</button>
-    <button id="delete">DELETE</button>
-    <h1>input</h1>
-    <input id="name" />
-    <input id="price" />
-    <h1>output</h1>
+    <h3>입력 명령 버튼:</h3>
+    <button id="get">음료객체정보읽기 (GET)</button>
+    <button id="post">신규음료등록 (POST)</button>
+    <button id="put">기존음료수정 (PUT)</button>
+    <button id="delete">기존음료삭제 (DELETE)</button>
+    <hr style="margin: 30px 0 50px 0;">
+    <h3>입력 데이터:</h3>
+    <div>
+        <label>음료 이름:</label>
+        <input id="name" />
+    </div>
+    <div>
+        <label>음료 가격:</label>
+        <input id="price" />
+    </div>
+    <div>
+        <label>음료index:</label>
+        <input id="index"/>
+    </div>
+    <hr style="margin: 50px 0 50px 0;">
+    <h3>응답 메세지 전체</h3>
     <textarea id="output" disabled="disabled" cols="40" rows="5"></textarea>
+
+    <h3 style="margin: 50px 0 30px 0;">수정/추가 이후 해당 음료 정보:</h3>
+    <div>
+        <label>음료 이름:</label>
+        <input id="nameInput"/>
+    </div>
+    <div>
+        <label>음료 가격:</label>
+        <input id="priceInput"/>
+    </div>
 </body>
 </html>
