@@ -15,7 +15,7 @@ export const naverMoviesApi = {
   search: word => api.get('/v1/search/movie.json', {
     params: {
       query: word,
-      display: 20
+      display: 10
     }
   })
 };

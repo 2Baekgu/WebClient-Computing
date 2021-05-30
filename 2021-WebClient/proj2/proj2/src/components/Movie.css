@@ -1,5 +1,7 @@
 .movies .movie {
-  width: 45%;
+  text-align: center;
+  display: none;
+  /* width: 45%;
   background-color: white;
   margin-bottom: 70px;
   font-weight: 300;
@@ -7,23 +9,26 @@
   border-radius: 5px;
   color: #adaeb9;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025); */
 }
 
 .movies .movie a {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* align-items: flex-start;
   justify-content: space-between;
   text-decoration: none;
-  color: inherit;
+  color: inherit; */
 }
 
 .movie img {
   position: relative;
-  top: -50px;
-  max-width: 150px;
+  top: -15px;
+  max-width: 300px;
   width: 100%;
-  margin-right: 30px;
+  margin-bottom: 3%;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
@@ -59,7 +64,6 @@
 .movie__actor,
 .movie__year,
 .movie__rating {
-  display: flex;
   align-items: center;
   color: #2c2c2c;
   font-size: 13px;
@@ -71,4 +75,12 @@
 .movie__rating span {
   flex: 0 0 80px;
   font-weight: 700;
+}
+.movie_info{
+  text-align: left;
+  margin-top: 4%;
+  margin-left: 8%;
+}
+.movie_info  p{
+  margin-top: 5%;
 }

@@ -17,8 +17,8 @@ let getSearchMovie = async () => {
                     display: 20 
                   }, 
                   headers: { 
-                    'X-Naver-Client-Id': ID_KEY, 
-                    'X-Naver-Client-Secret': SECRET_KEY 
+                    'X-Naver-Client-Id': KgUBudEpkJ3kto3GxHXB, 
+                    'X-Naver-Client-Secret': SvF1wopaxU 
                   } 
                 }); 
                 console.log("items: ", items);

@@ -1,0 +1,17 @@
+.button{
+    font-size: 1.4em;
+    width: 7.5%;
+    height: 5vh;
+    margin-top: 120px;
+    margin-left: 6px;
+    margin-right: 6px;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 5px;
+    background-color: rgb(35, 184, 208);
+    color: white;
+    text-align: center;
+}
+
+body{
+    text-align: center;
+}

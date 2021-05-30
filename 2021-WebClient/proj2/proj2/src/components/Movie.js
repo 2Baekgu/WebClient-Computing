@@ -6,11 +6,12 @@ function Movie({id, year, title, poster, rating, director, actor}) {
   return (
     <div className="movie">
     <a href={id} target="_blank">
-      <img src={poster} alt={title} titlt={title}></img>
+    <img src={poster} alt={title} titlt={title}></img>
     <div className="movie__data">
       <h3 className="movie__title">{
           title.replace(/<b>/gi,"").replace(/<\/b>/gi,"")
         }</h3>
+      <div className="movie_info">
       <p className="movie__rating">
         <span>평점</span> {rating}/10
       </p>
@@ -23,6 +24,7 @@ function Movie({id, year, title, poster, rating, director, actor}) {
     <p className="movie__actor">
       <span>배우</span> {actor}
     </p>
+    </div>
     </div>
   </a>
   </div>
