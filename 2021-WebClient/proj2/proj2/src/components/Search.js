@@ -47,7 +47,6 @@ class Search extends React.Component {
 
   clickIndex(index){
     this.setState ( {index : index});
-    console.log(index);
   };
 
   render() {
